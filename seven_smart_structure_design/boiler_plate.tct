@@ -1,0 +1,33 @@
+
+__init__={
+
+    //creation of obj instance for all class
+    Seven:new Seven(),
+
+    storage:{
+
+        'page_name':{
+            func:[] // function which are associated to the given page 
+             ,
+            variable:{
+                // name_variable:pointing_in_stack
+
+
+                },
+            next_pages:{
+
+            }
+
+        }
+    }
+}
+
+
+
+
+// "function_name":{
+//         "input":"expected_output"
+//                 or
+//                ["output","geeter variable ",expected]
+//                pre_1:ev=>{}  
+// }    

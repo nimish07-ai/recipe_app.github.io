@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+<body>
+    
+    <canvas id="myChart"></canvas>
+    <!-- <canvas id="myChart" width="400" height="100" aria-label="Hello ARIA World" role="img"></canvas> -->
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+let abc=""
+    fetch("http://127.0.0.1:5500/main.html#paa")
+    .then(ev=>{
+        return {"nimsi":ev.text()}
+    })
+    .then(ev=>{
+        console.log(ev);
+        ev.nimsi.then(ev1=>{console.log(ev1)})
+        //abc=ev;
+        //return {"to":ev.text()}
+    })
+    
+    </script>
+</body>
+</html>
